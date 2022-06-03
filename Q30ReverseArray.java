@@ -1,20 +1,31 @@
 package Assignment0306;
 
+import java.util.Scanner;
+
 public class Q30ReverseArray {
 
 	public static void main(String[] args) {
 		
-		int []arr = new int[] {1,2,3,4,5};
-		System.out.println("Original array : ");
-		for (int i =0;i<arr.length;i++)
+		System.out.println("Enter the length of Array :");
+		Scanner sc = new Scanner(System.in);
+		int size = sc.nextInt();
+		int arr1[] = new int[size];
+		System.out.println("Enter the value for Array :");
+		for(int i = 0;i<arr1.length;i++)
 		{
-			System.out.print(arr[i]+" ");
+			arr1[i]=sc.nextInt();
+		}
+		
+		System.out.println("Original array : ");
+		for (int i =0;i<arr1.length;i++)
+		{
+			System.out.print(arr1[i]+" ");
 		}
 		System.out.println();
 		System.out.println("Reverse of Array : ");
-		for(int i = arr.length-1;i>=0;i--)
+		for(int i = arr1.length-1;i>=0;i--)
 		{
-			System.out.print(arr[i]+ " ");
+			System.out.print(arr1[i]+ " ");
 		}
 	}
 
